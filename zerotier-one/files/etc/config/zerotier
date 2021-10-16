@@ -1,0 +1,4 @@
+
+config global
+	option secret 'generate' # generate secret on first start
+
