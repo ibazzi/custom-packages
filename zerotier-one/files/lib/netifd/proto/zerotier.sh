@@ -90,8 +90,6 @@ proto_zerotier_setup() {
 	$ZT_CLI_COMMAND set $networkid allowDefault=$allowdefault
 	$ZT_CLI_COMMAND set $networkid allowGlobal=$allowglobal
 	[ -n "$mtu" ] && ifconfig $link mtu $mtu
-
-	[ -x "$IFUP_SCRIPT" ] && $IFUP_SCRIPT $link
 }
 
 proto_zerotier_teardown() {
